@@ -1,11 +1,11 @@
 # Learn about WebSockets and developing a API witch Socket.IO.
 
-Repository created for learning and develop a Node.js REST API using Socket.IO and MongoDB.
+Repository created for learning and develop a Node.js(Bun) REST API using Socket.IO and MongoDB.
 
 | :placard: Vitrine.Dev |     |
 | -------------  | --- |
 | :sparkles: Nome        | **WebSockets**
-| :label: Tecnologias | JavaScript, NodeJS, Socket.IO, MongoDB
+| :label: Tecnologias | JavaScript, NodeJS, BunJS, Socket.IO, MongoDB
 | :rocket: URL         | https://url-deploy.com.br
 | :fire: Desafio     | https://url-do-desafio.com.br
 
