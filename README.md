@@ -9,7 +9,7 @@ Repository created for learning and develop a Node.js REST API using Socket.IO a
 <!---| :rocket: URL         | https://url-deploy.com.br
 | :fire: Desafio     | https://url-do-desafio.com.br--->
 
-## Detalhes do projeto
+## About
 
 This project is based on Alura's course: [WebSockets: implemente comunicações em tempo real com Socket.IO e MongoDB](https://cursos.alura.com.br/course/websockets-comunicacoes-tempo-real-socket-io-mongodb).
 
