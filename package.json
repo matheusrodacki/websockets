@@ -1,6 +1,6 @@
 {
   "name": "websockets",
-  "module": "./src/index.js",
+  "module": "./src/socket-back.js",
   "type": "module",
   "scripts": {
     "dev": "bun --hot ./src/socket-back.js"
