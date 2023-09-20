@@ -11,7 +11,7 @@ Repository created for learning and develop a Node.js REST API using Socket.IO a
 
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
-[](https://postimg.cc/F7J4YT4R#vitrinedev)
+![](https://i.postimg.cc/wTwTbr4h/1-f-HD1q-A0r-Cg2-Msdv-t-Ao-W3g.jpg#vitrinedev)
 ## About
 
 This project is based on Alura's course: [WebSockets: implemente comunicações em tempo real com Socket.IO e MongoDB](https://cursos.alura.com.br/course/websockets-comunicacoes-tempo-real-socket-io-mongodb).
