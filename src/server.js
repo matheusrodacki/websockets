@@ -12,13 +12,12 @@ const diretorioPublico = path.join(caminhoAtual, "../..", "public");
 app.use(express.static(diretorioPublico));
 
 //inicinado o servidor http
-const servidorHttp = http.createServer(app);
-servidorHttp.listen(porta, () =>
+const httpServer = http.createServer(app);
+httpServer.listen(porta, () =>
   console.log(`Servidor rodando na porta ${porta}`)
 );
 
 //iniciando o socket.io
-const io = new Server(servidorHttp);
-io.on("connection", () => {
-  console.log("Um cliente se conectou!");
-});
+const io = new Server(httpServer);
+
+export default io;

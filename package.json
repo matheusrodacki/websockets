@@ -3,7 +3,7 @@
   "module": "./src/index.js",
   "type": "module",
   "scripts": {
-    "dev": "bun --hot ./src/index.js"
+    "dev": "bun --hot ./src/socket-back.js"
   },
   "devDependencies": {
     "bun-types": "latest"
