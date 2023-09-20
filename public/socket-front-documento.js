@@ -6,8 +6,8 @@ function selecionarDocumento(nome) {
   socket.emit("selecionar_documento", nome);
 }
 
-function emitirTextoEditor(texto, nomeDocumento) {
-  socket.emit("texto_editor", texto, nomeDocumento);
+function emitirTextoEditor(texto, dados) {
+  socket.emit("texto_editor", texto, dados);
 }
 
 socket.on("texto_editor_clientes", (texto) => {
