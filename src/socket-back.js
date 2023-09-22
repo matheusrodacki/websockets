@@ -1,9 +1,15 @@
-import { encontrarDocumento, atualizaDocumento } from "./documentosDB.js";
+import {
+  encontrarDocumento,
+  atualizaDocumento,
+  obterDocumentos,
+} from "./documentosDB.js";
 import io from "./index.js";
 
 io.on("connection", (socket) => {
-  console.log("Um cliente se conectou! ID:", socket.id);
-
+  socket.on("obter_documentos", async (devolverDocumentos) => {
+    const documentos = await obterDocumentos();
+    devolverDocumentos(documentos);
+  });
   socket.on("selecionar_documento", async (nomeDocumento, devolverTexto) => {
     socket.join(nomeDocumento);
     const documento = await encontrarDocumento(nomeDocumento);
@@ -20,8 +26,5 @@ io.on("connection", (socket) => {
     }
   });
 
-  socket.on("disconnect", (motivo) => {
-    console.log(`Cliente "${socket.id}" desconectado!
-    Motivo: ${motivo}`);
-  });
+  socket.on("disconnect", (motivo) => {});
 });
