@@ -6,7 +6,9 @@
     "dev": "bun --hot ./src/socket-back.js"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "bun-types": "latest",
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
