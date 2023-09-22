@@ -32,9 +32,15 @@ function atualizaDocumento(nome, texto) {
   return atualizacao;
 }
 
+function deletaDocumento(nome) {
+  const resultado = documentosColecao.deleteOne({ nome });
+  return resultado;
+}
+
 export {
   encontrarDocumento,
   atualizaDocumento,
   obterDocumentos,
   adicionarDocumento,
+  deletaDocumento,
 };

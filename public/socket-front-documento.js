@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 
-import { atualizaTextoEditor } from "./documento.js";
+import { atualizaTextoEditor, alertaERedirecionar } from "./documento.js";
 
 const socket = io();
 
@@ -23,4 +23,12 @@ socket.on("disconnect", (motivo) => {
   Motivo: ${motivo}`);
 });
 
-export { emitirTextoEditor, selecionarDocumento };
+function emitirExcluirDocumento(nome) {
+  socket.emit("excluir_documento", nome);
+}
+
+socket.on("documento_deletado_sucesso", (nome) => {
+  alertaERedirecionar(nome);
+});
+
+export { emitirTextoEditor, selecionarDocumento, emitirExcluirDocumento };

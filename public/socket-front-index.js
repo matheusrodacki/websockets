@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-import { inserirLinkDocumento } from "./index.js";
+import { removerDocumento, inserirLinkDocumento } from "./index.js";
 
 const socket = io();
 
@@ -19,6 +19,10 @@ socket.on("adicionar_documento_interface", (nome) => {
 
 socket.on("documento_existente", (nome) => {
   alert(`O documento ${nome} já existe`);
+});
+
+socket.on("documento_deletado_sucesso", (nome) => {
+  removerDocumento(nome);
 });
 
 export { emitirAdicionaDocumento };

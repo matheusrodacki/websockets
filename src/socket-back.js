@@ -3,6 +3,7 @@ import {
   atualizaDocumento,
   obterDocumentos,
   adicionarDocumento,
+  deletaDocumento,
 } from "./documentosDB.js";
 import io from "./index.js";
 
@@ -38,6 +39,14 @@ io.on("connection", (socket) => {
 
     if (atualizacao.modifiedCount) {
       socket.to(nomeDocumento).emit("texto_editor_clientes", texto);
+    }
+  });
+
+  socket.on("excluir_documento", async (nome) => {
+    const resultado = await deletaDocumento(nome);
+
+    if (resultado.deletedCount) {
+      io.emit("documento_deletado_sucesso", nome);
     }
   });
 
